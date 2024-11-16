@@ -34,4 +34,4 @@ npm start
 ## Contact
 - Email: mohan_gi@hotmail.com
 - GitHub: [girimohan](https://github.com/girimohan)
-- LinkedIn: [Mohan Giri](https://linkedin.com/in/mohan-giri)
+- LinkedIn: [Mohan Giri](https://www.linkedin.com/in/mohan-giri-37b87a186/)
