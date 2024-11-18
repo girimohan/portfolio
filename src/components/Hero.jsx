@@ -60,12 +60,57 @@ const Hero = () => {
               
               {/* Enhanced Bio Card */}
               <div className="relative bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Final-year Computer Applications student at HAMK with focus on Computer Vision 
-                  and Machine Learning. Currently developing intelligent systems for urban mobility 
-                  and industrial quality control. Passionate about creating AI solutions that make 
-                  a real-world impact.
-                </p>
+                {/* Professional Summary */}
+                <div className="border-l-4 border-blue-500 pl-4 mb-6">
+                  <p className="text-lg text-gray-700">
+                    Machine Learning Engineer & Full Stack Developer completing Bachelor's in Computer Applications 
+                    at HAMK (December 2024). Specialized in developing AI solutions with real-world impact.
+                  </p>
+                </div>
+
+                {/* Key Projects Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <h3 className="font-medium text-blue-600 mb-2">Thesis Project</h3>
+                    <p className="text-sm text-gray-600">
+                      Smart Parking Assistant
+                      <span className="block mt-1 text-gray-500">
+                        • YOLOv5 Vehicle Detection (97.9% accuracy)
+                        • Rasa Chatbot Integration
+                        • Real-time Processing Pipeline
+                      </span>
+                    </p>
+                  </div>
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <h3 className="font-medium text-blue-600 mb-2">Industry Experience</h3>
+                    <p className="text-sm text-gray-600">
+                      Surface Blister Detection System
+                      <span className="block mt-1 text-gray-500">
+                        • OpenCV & YOLOv5 Implementation
+                        • Django Web Application
+                        • Real-time Analysis System
+                      </span>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Technical Focus */}
+                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg">
+                  <h3 className="text-sm font-semibold text-gray-700 mb-2">TECHNICAL EXPERTISE</h3>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-white/60 rounded text-xs text-gray-600">Computer Vision</span>
+                    <span className="px-2 py-1 bg-white/60 rounded text-xs text-gray-600">Deep Learning</span>
+                    <span className="px-2 py-1 bg-white/60 rounded text-xs text-gray-600">Python</span>
+                    <span className="px-2 py-1 bg-white/60 rounded text-xs text-gray-600">Django</span>
+                    <span className="px-2 py-1 bg-white/60 rounded text-xs text-gray-600">React</span>
+                  </div>
+                </div>
+
+                {/* Current Status */}
+                <div className="mt-4 flex items-center gap-2 text-sm text-green-600">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  <span>Available for ML Engineer, Developer & Data Science roles</span>
+                </div>
               </div>
             </div>
 
@@ -165,6 +210,16 @@ const Hero = () => {
 
           {/* Right Column - Code Preview (spans 5 columns) */}
           <div className="lg:col-span-5 relative">
+            {/* Profile Image */}
+            <div className="relative mb-6">
+              <img
+                //src="/images/mo_dv.jpg"
+                src={`${process.env.PUBLIC_URL}/images/mohan.jpg`}
+                alt="Mohan Giri"
+                className="w-full h-[500px] object-cover rounded-2xl shadow-xl border-2 border-white
+                  transform hover:-rotate-2 transition-all duration-300"
+              />
+            </div>
             <div className="relative rounded-2xl overflow-hidden bg-white shadow-xl border border-gray-200 
               transform hover:-rotate-1 transition-transform duration-200">
               {/* Code Editor Header */}
