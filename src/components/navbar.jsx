@@ -6,6 +6,7 @@ import { MenuIcon, XIcon, GithubIcon, LinkedinIcon } from 'lucide-react';
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Projects', path: '/projects' },
+  { name: 'Services', path: '/services' },  
   { name: 'About', path: '/about' },
   { name: 'Blog', path: '/blog' },
   { name: 'Contact', path: '/contact' },
