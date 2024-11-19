@@ -177,7 +177,7 @@ const Hero = () => {
             {/* Profile Image */}
             <div className="relative">
               <img
-                src={`${process.env.PUBLIC_URL}/images/mohan.jpg`}
+                src={`${process.env.PUBLIC_URL}/images/mopic.jpg`}
                 alt="Mohan Giri"
                 className="w-full aspect-[3/4] object-cover rounded-2xl shadow-xl border-2 border-white"
               />
