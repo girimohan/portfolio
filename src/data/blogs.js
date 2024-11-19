@@ -3,7 +3,7 @@ export const blogs = [
       id: 1,
       title: "Building a Smart Parking System with Computer Vision and Conversational AI",
       slug: "smart-parking-computer-vision",
-      date: "March 15, 2024",
+      date: "October 15, 2024",
       category: "Machine Learning",
       summary: "Deep dive into implementing a comprehensive parking management system using YOLOv5 for real-time vehicle detection and Rasa for natural language interaction. Learn about synthetic data generation, transfer learning, and system integration.",
       tags: ["Computer Vision", "YOLO", "Deep Learning", "Python", "Flask", "Rasa", "NLP", "Streamlit"],
@@ -131,7 +131,7 @@ export const blogs = [
       id: "portfolio-development",
       title: "Building My Professional Portfolio with React and Tailwind",
       slug: "building-portfolio-react-tailwind",
-      date: "January 15, 2024",
+      date: "November 15, 2024",
       category: "Web Development",
       summary: "A detailed walkthrough of how I built my professional portfolio website using React and Tailwind CSS, focusing on modern design principles and clean code architecture.",
       tags: ["React", "Tailwind CSS", "Portfolio", "Web Development", "JavaScript"],
@@ -245,7 +245,83 @@ export const blogs = [
         github: "https://github.com/girimohan/portfolio",
         demo: "https://girimohan.github.io/portfolio"
       }
+  },
+
+  
+{
+  id: "coding-in-ai-age",
+  title: "Is Coding Still Worth Learning in the Age of AI?",
+  slug: "coding-worth-learning-ai-age",
+  date: "October 20, 2024",
+  category: "Technology & Career",
+  summary: "A perspective on the evolving role of coding skills in an AI-driven tech landscape, based on my experiences as a graduating Computer Science student and industry projects.",
+  readTime: "6 min read",
+  tags: ["AI", "Career", "Software Development", "Technology Trends", "Personal Experience"],
+  sections: [
+    {
+      title: "Introduction",
+      content: [
+        "As a computer science student graduating in 2024, I've watched the rapid rise of AI coding assistants like GitHub Copilot and ChatGPT with both excitement and apprehension. My classmates and I often debate whether we picked the right field, given how AI seems to be transforming software development. After internships, course projects, and countless conversations with industry professionals, I'd like to share my perspective on why I believe learning to code remains crucial in today's tech landscape."
+      ]
+    },
+    {
+      title: "AI in Real-World Applications",
+      content: [
+        "My recent experiences have shown me how deeply AI is transforming various industries. During my summer project at Cinia Oy, I worked on developing a call volume prediction system. This project opened my eyes to how companies are actively seeking AI solutions to optimize their operations. The system we developed helped predict customer service demand, allowing for better resource allocation and improved service quality.",
+        "Later, during my internship at HAMK Smart, I built a robust blister detection system for analyzing paint-coated metal images. This project demonstrated another crucial application of AI in quality control and manufacturing. Working directly with industry partners showed me that companies aren't just interested in AI – they're actively investing in it to improve their processes and maintain competitive advantages."
+      ]
+    },
+    {
+      title: "The Evolving Role of Developers",
+      content: [
+        "These experiences taught me something crucial: while AI is becoming ubiquitous, its successful implementation still requires strong programming fundamentals."
+      ],
+      bulletPoints: [
+        "Preprocessing data effectively",
+        "Implementing and fine-tuning AI models",
+        "Creating robust testing frameworks",
+        "Integrating AI solutions with existing systems"
+      ],
+      content2: [
+        "During my internship, I noticed that companies aren't just looking for AI expertise or traditional coding skills – they want both. The ability to write clean, efficient code while understanding AI capabilities and limitations has become increasingly valuable."
+      ]
+    },
+    {
+      title: "The New Development Landscape",
+      content: [
+        "The job market reflects this dual demand. Companies are actively seeking developers who can bridge the gap between traditional software development and AI implementation. My conversations with industry professionals reveal that understanding both domains is becoming a significant advantage. Modern software development isn't just about writing code; it's about knowing when to leverage AI and how to integrate it effectively into larger systems."
+      ]
+    },
+    {
+      title: "Learning and Growing in an AI-Enhanced World",
+      content: [
+        "My academic journey has evolved alongside these industry trends. While learning basic programming concepts, we're simultaneously exploring AI applications. This parallel learning approach has shown me that AI tools don't diminish the importance of coding skills – they enhance them. Understanding algorithms and data structures has proved crucial when working with AI systems, as it helps in optimizing their performance and understanding their limitations."
+      ]
+    },
+    {
+      title: "Looking Ahead with Confidence",
+      content: [
+        "The future of software development looks incredibly promising. The integration of AI into various industries isn't making coding obsolete; it's creating new opportunities for those who can combine traditional programming skills with AI expertise. From predicting call volumes to detecting manufacturing defects, AI is opening new frontiers in what we can achieve with code.",
+        "For students and aspiring developers, the message is clear: embrace both traditional coding and AI technologies. The most exciting opportunities lie at the intersection of these skills. As companies continue to seek AI solutions, developers who can understand, implement, and maintain these systems will be invaluable."
+      ]
+    }
+  ],
+  relatedProjects: [
+    {
+      name: "Call Volume Prediction System",
+      link: "/project/call-volume-prediction"
+    },
+    {
+      name: "Surface Blister Detection",
+      link: "/project/surface-blister-detection"
+    }
+  ],
+  socialShare: {
+    linkedinTitle: "Is Coding Still Worth Learning in the Age of AI? A Fresh Graduate's Perspective",
+    linkedinSummary: "Sharing my thoughts on the future of coding careers based on my experiences with AI projects at Cinia Oy and HAMK Smart. #AI #SoftwareDevelopment #TechCareers #ComputerScience",
+    linkedinLink: "https://girimohan.github.io/portfolio/blog/coding-worth-learning-ai-age"
   }
+}
 
 
   ];
