@@ -137,7 +137,7 @@ const Hero = () => {
                   View All Projects
                 </Link>
                 <a
-                  href="/images/mohan_cv_new.pdf"
+                  href="/portfolio/images/mohan_cv_new.pdf"
                   download
                   className="flex-1 text-center px-6 py-3 rounded-lg bg-white text-gray-700 
                     font-medium hover:bg-gray-50 transition-all border border-gray-200 
