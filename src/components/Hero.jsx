@@ -60,7 +60,7 @@ const Hero = () => {
                 Helsinki, Finland
               </div>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-50 text-green-700 text-sm">
-                Available from December 2024
+                Available from Feb 2025
               </div>
             </div>
 
@@ -75,7 +75,7 @@ const Hero = () => {
             {/* Bio Card */}
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
               <p className="text-lg text-gray-700">
-                ML Engineer graduating from HAMK (Dec 2024), specializing in Computer Vision 
+                ML Engineer graduated from HAMK (Dec 2024), specializing in Computer Vision 
                 and Full Stack Development. Recently completed industry projects including 
                 a Smart Parking System (97.9% accuracy) and Surface Blister Detection system 
                 at HAMK Smart using state-of-the-art ML technologies.
@@ -137,7 +137,7 @@ const Hero = () => {
                   View All Projects
                 </Link>
                 <a
-                  href="/portfolio/images/mohan_cv_new.pdf"
+                  href="/portfolio/images/Giri_Mohan_CV.pdf"
                   download
                   className="flex-1 text-center px-6 py-3 rounded-lg bg-white text-gray-700 
                     font-medium hover:bg-gray-50 transition-all border border-gray-200 
@@ -156,7 +156,7 @@ const Hero = () => {
                   <GithubIcon className="h-6 w-6" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/mohan-giri"
+                  href="https://www.linkedin.com/in/mohan-giri-37b87a186/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
