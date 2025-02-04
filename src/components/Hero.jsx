@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -5,44 +6,101 @@ import {
   GithubIcon, 
   LinkedinIcon, 
   DownloadIcon, 
+  CheckCircle,
+  Briefcase,
   Mail, 
   MapPin,
-  ExternalLinkIcon
+  ExternalLinkIcon,
+  Code,
+  Cpu,  // Changed from ChipIcon
+  Brain,
+  MonitorIcon,  // For development
+  DatabaseIcon  // For data engineering
 } from 'lucide-react';
 
+// Professional Skills Structure
+const skillCategories = [
+  {
+    category: "Machine Learning & AI",
+    icon: Brain,
+    skills: [
+      { name: "Computer Vision", level: "Advanced", color: "bg-blue-50 text-blue-700 border-blue-100" },
+      { name: "PyTorch/YOLOv5", level: "Advanced", color: "bg-orange-50 text-orange-700 border-orange-100" },
+      { name: "Deep Learning", level: "Advanced", color: "bg-purple-50 text-purple-700 border-purple-100" }
+    ]
+  },
+  {
+    category: "Development",
+    icon: Code,
+    skills: [
+      { name: "Python", level: "Advanced", color: "bg-yellow-100 text-yellow-800 border-yellow-200" },
+      { name: "Django/Flask", level: "Intermediate", color: "bg-green-50 text-green-700 border-green-100" },
+      { name: "React", level: "Intermediate", color: "bg-pink-50 text-pink-700 border-pink-100" }
+    ]
+  },
+  {
+    category: "Data Engineering",
+    icon: DatabaseIcon,
+    skills: [
+      { name: "SQL/Databases", level: "Intermediate", color: "bg-indigo-50 text-indigo-700 border-indigo-100" },
+      { name: "Data Analysis", level: "Advanced", color: "bg-cyan-50 text-cyan-700 border-cyan-100" },
+      { name: "PowerBI", level: "Intermediate", color: "bg-violet-50 text-violet-700 border-violet-100" }
+    ]
+  }
+];
+
+// Key Projects with Impact
+const featuredProjects = [
+  { 
+    name: 'Smart Parking Assistant',
+    link: '/project/smart-parking-assistant',
+    description: 'Thesis Project',
+    tech: 'PyTorch · YOLOv5 · Rasa',
+    impact: 'Achieved 97.9% detection accuracy in real-world conditions',
+    type: 'ML Research'
+  },
+  { 
+    name: 'Surface Blister Detection',
+    link: '/project/surface-blister-detection-system',
+    description: 'Industry Project',
+    tech: 'OpenCV · YOLOv5 · Django',
+    impact: 'Automated quality control for industrial applications',
+    type: 'Computer Vision'
+  },
+  { 
+    name: 'Call Volume Prediction',
+    link: '/project/call-volume-prediction',
+    description: 'Industry Project',
+    tech: 'Time Series · ARIMA · Python',
+    impact: 'Enhanced resource allocation through predictive analytics',
+    type: 'Data Science'
+  }
+];
+
+// Professional Achievements
+const achievements = [
+  {
+    title: "Industry Experience",
+    description: "Developed ML solutions for real industrial applications during internship at HAMK Smart"
+  },
+  {
+    title: "Project Success",
+    description: "Led development of Smart Parking Assistant with 97.9% detection accuracy"
+  },
+  {
+    title: "Technical Expertise",
+    description: "Proficient in Python, ML frameworks, and web technologies with practical implementation"
+  }
+];
+
+// Value Propositions
+const valueProps = [
+  "Strong foundation in both ML/AI and full-stack development",
+  "Experience with real-world industry projects and implementations",
+  "Quick learner with proven ability to deliver results",
+  "Passionate about creating practical AI solutions"
+];
 const Hero = () => {
-  const skills = [
-    { name: 'Computer Vision', color: 'bg-blue-50 text-blue-700 border-blue-100' },
-    { name: 'Machine Learning', color: 'bg-green-50 text-green-700 border-green-100' },
-    { name: 'PyTorch', color: 'bg-orange-50 text-orange-700 border-orange-100' },
-    { name: 'Python', color: 'bg-yellow-100 text-yellow-800 border-yellow-200' },
-    { name: 'Deep Learning', color: 'bg-purple-50 text-purple-700 border-purple-100' },
-    { name: 'Django', color: 'bg-pink-50 text-pink-700 border-pink-100' },
-    { name: 'Data Analysis', color: 'bg-indigo-50 text-indigo-700 border-indigo-100' },
-    { name: 'PowerBI', color: 'bg-cyan-50 text-cyan-700 border-cyan-100' },
-  ];
-
-  const featuredProjects = [
-    { 
-      name: 'Smart Parking Assistant', 
-      link: '/project/smart-parking-assistant',
-      description: 'Thesis Project',
-      tech: 'PyTorch · YOLOv5 · Rasa'
-    },
-    { 
-      name: 'Surface Blister Detection', 
-      link: '/project/surface-blister-detection',
-      description: 'Industry Project',
-      tech: 'OpenCV · YOLOv5 · Django'
-    },
-    { 
-      name: 'Call Volume Prediction', 
-      link: '/project/call-volume-prediction',
-      description: 'Industry Project',
-      tech: 'Time Series · ARIMA · Python'
-    },
-  ];
-
   return (
     <div className="relative min-h-screen bg-gray-50">
       {/* Background Pattern */}
@@ -53,69 +111,95 @@ const Hero = () => {
           
           {/* Left Column - Content (spans 7 columns) */}
           <div className="lg:col-span-7 space-y-8 lg:sticky lg:top-24">
-            {/* Status Badges */}
+            {/* Status and Location */}
             <div className="flex flex-wrap gap-3">
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm">
                 <MapPin className="h-4 w-4 mr-2" />
                 Helsinki, Finland
               </div>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-50 text-green-700 text-sm">
+                <CheckCircle className="h-4 w-4 mr-2" />
                 Available from Feb 2025
               </div>
             </div>
 
             {/* Header Section */}
             <div className="space-y-4">
-              <h1 className="text-5xl font-bold tracking-tight lg:text-6xl xl:text-7xl">
+              <h1 className="text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl">
                 <span className="block text-gray-900">Mohan Giri</span>
                 <span className="block text-blue-600 mt-2">ML Engineer & Developer</span>
               </h1>
             </div>
 
-            {/* Bio Card */}
+            {/* Enhanced Bio */}
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
               <p className="text-lg text-gray-700">
-                ML Engineer graduated from HAMK (Dec 2024), specializing in Computer Vision 
-                and Full Stack Development. Recently completed industry projects including 
-                a Smart Parking System (97.9% accuracy) and Surface Blister Detection system 
-                at HAMK Smart using state-of-the-art ML technologies.
+                Computer Applications graduate from HAMK, specializing in Machine Learning and Full Stack Development. 
+                Successfully delivered two industry projects: a Smart Parking System achieving 97.9% accuracy 
+                and a Surface Blister Detection system for quality control. Strong foundation in Python, 
+                Machine Learning frameworks, and web technologies with practical experience in implementing 
+                end-to-end solutions.
               </p>
             </div>
 
-            {/* Skills Grid */}
-            <div className="grid grid-cols-2 gap-4">
-              {skills.map((skill) => (
-                <span
-                  key={skill.name}
-                  className={`${skill.color} px-4 py-3 rounded-xl text-sm font-medium 
-                    border transition-all hover:scale-[1.02] cursor-default flex items-center 
-                    justify-center text-center`}
-                >
-                  {skill.name}
-                </span>
+            {/* Achievements Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {achievements.map((achievement, index) => (
+                <div key={index} className="bg-white p-4 rounded-xl border border-gray-100">
+                  <h3 className="font-semibold text-gray-900 mb-1">{achievement.title}</h3>
+                  <p className="text-sm text-gray-600">{achievement.description}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Skills Categories */}
+            <div className="space-y-6">
+              {skillCategories.map((category, index) => (
+                <div key={index} className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <category.icon className="h-5 w-5 text-blue-600" />
+                    <h3 className="text-sm font-semibold text-gray-900">
+                      {category.category}
+                    </h3>
+                  </div>
+                  <div className="grid grid-cols-3 gap-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <div
+                        key={skillIndex}
+                        className={`${skill.color} px-3 py-2 rounded-lg text-sm 
+                          border transition-all hover:scale-[1.02] cursor-default`}
+                      >
+                        <div className="font-medium">{skill.name}</div>
+                        <div className="text-xs opacity-75">{skill.level}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
 
             {/* Featured Projects */}
             <div className="space-y-4">
-              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
-                Featured Work
+              <h3 className="text-sm font-semibold text-gray-900 flex items-center gap-2">
+                <Briefcase className="h-5 w-5 text-blue-600" />
+                Featured Projects
               </h3>
-              <div className="grid grid-cols-1 gap-3">
+              <div className="grid gap-4">
                 {featuredProjects.map((project) => (
                   <Link
                     key={project.name}
                     to={project.link}
-                    className="group relative overflow-hidden bg-white rounded-xl border border-gray-200 
-                      hover:border-blue-200 hover:bg-blue-50/50 transition-all duration-200 p-4"
+                    className="group bg-white rounded-xl border border-gray-200 p-4 
+                      hover:border-blue-200 hover:bg-blue-50/50 transition-all duration-200"
                   >
-                    <div className="flex justify-between items-center">
-                      <div>
+                    <div className="flex justify-between items-start">
+                      <div className="space-y-1">
                         <h4 className="font-semibold text-gray-900 group-hover:text-blue-600">
                           {project.name}
                         </h4>
-                        <p className="text-sm text-gray-500 mt-1">{project.description}</p>
-                        <p className="text-xs text-gray-400 font-mono mt-1">{project.tech}</p>
+                        <p className="text-sm text-blue-600">{project.description}</p>
+                        <p className="text-sm text-gray-600">{project.impact}</p>
+                        <p className="text-xs text-gray-400 font-mono">{project.tech}</p>
                       </div>
                       <ExternalLinkIcon className="h-5 w-5 text-gray-400 group-hover:text-blue-600 
                         transform group-hover:translate-x-1 transition-all" />
@@ -123,6 +207,19 @@ const Hero = () => {
                   </Link>
                 ))}
               </div>
+            </div>
+
+            {/* Value Proposition */}
+            <div className="bg-blue-50 p-6 rounded-xl">
+              <h3 className="font-semibold text-gray-900 mb-4">Why Work With Me</h3>
+              <ul className="space-y-3">
+                {valueProps.map((prop, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-2"></span>
+                    <span className="text-gray-700">{prop}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* CTAs and Social */}
@@ -137,7 +234,7 @@ const Hero = () => {
                   View All Projects
                 </Link>
                 <a
-                  href="/portfolio/images/Giri_Mohan_CV.pdf"
+                  href="/images/Giri_Mohan_CV.pdf"
                   download
                   className="flex-1 text-center px-6 py-3 rounded-lg bg-white text-gray-700 
                     font-medium hover:bg-gray-50 transition-all border border-gray-200 
@@ -172,16 +269,24 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          {/* Right Column - Visual Elements (spans 5 columns) */}
+{/* Right Column - Visual Elements (spans 5 columns) */}
           <div className="lg:col-span-5 space-y-6">
             {/* Profile Image */}
             <div className="relative">
               <img
-                src={`${process.env.PUBLIC_URL}/images/mopic.jpg`}
+                src={`${process.env.PUBLIC_URL}/images/mopic2.JPG`}
                 alt="Mohan Giri"
                 className="w-full aspect-[3/4] object-cover rounded-2xl shadow-xl border-2 border-white"
               />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-gray-900/20 to-transparent" />
+              
+              {/* Optional: Floating Badge */}
+              <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 
+                shadow-lg border border-white">
+                <p className="text-sm font-medium text-gray-900">
+                  Open to Opportunities
+                </p>
+              </div>
             </div>
 
             {/* Code Preview */}
@@ -210,11 +315,6 @@ const Hero = () => {
                   <span className="text-gray-100"> models.yolo </span>
                   <span className="text-[#ff79c6]">import</span>
                   <span className="text-gray-100"> YOLOv5</span>
-                  <br />
-                  <span className="text-[#ff79c6]">from</span>
-                  <span className="text-gray-100"> rasa.core </span>
-                  <span className="text-[#ff79c6]">import</span>
-                  <span className="text-gray-100"> Agent</span>
                   <br /><br />
                   <span className="text-[#50fa7b]">class</span>
                   <span className="text-[#8be9fd]"> ParkingAssistant</span>
@@ -240,6 +340,22 @@ const Hero = () => {
               </div>
             </div>
 
+            {/* Contact Card */}
+            <div className="bg-white p-6 rounded-xl border border-blue-100">
+              <h3 className="font-semibold text-blue-900 mb-2">Let's Connect!</h3>
+              <p className="text-gray-600 mb-4">
+                I'm excited to discuss how my skills in ML and development can contribute to your team's success.
+              </p>
+              <a
+                href="mailto:mohan_gi@hotmail.com"
+                className="inline-flex items-center justify-center w-full px-6 py-3 bg-blue-600 
+                  text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Get in Touch
+              </a>
+            </div>
+
             {/* Decorative Elements */}
             <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-full blur-3xl" />
             <div className="absolute -top-8 -left-8 w-64 h-64 bg-gradient-to-br from-yellow-600/10 to-pink-600/10 rounded-full blur-3xl" />
@@ -250,4 +366,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero;          
